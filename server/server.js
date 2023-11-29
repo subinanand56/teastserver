@@ -13,7 +13,9 @@ app.use(express.static('public'));
 app.listen(8081, () => {
   console.log("Server Running");
 });
-
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome</h1>");
+});
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
